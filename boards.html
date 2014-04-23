@@ -1,0 +1,104 @@
+<!--
+/**
+ * Copyright (C) 2014 Leonardo Rossi <leonardo.rossi@studenti.unipr.it>
+ *
+ * This source code is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This source code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this source code; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ */
+-->
+<!DOCTYPE>
+<html lang="en" ng-app="MyTrelloApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap -->
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<!-- css -->
+<link href="css/style.css" rel="stylesheet">
+<link href="css/form-signin.css" rel="stylesheet">
+<title></title>
+</head>
+<body>
+	<div ng-controller="BoardsCtrl">
+		<div class="container">
+			<div class="row header">
+				<div class="navbar-header col-xs-12">
+					<div class="menu-user">
+						<div ng-hide="user.username">
+							<a href="#Gui/Users/Login">login</a>
+						</div>
+						<div class="" ng-show="user.username">
+							Welcome {{user.username}}, <a href="#Gui/Users/Logout">logout</a>
+						</div>
+					</div>
+					<div class="">
+						<a class="navbar-brand" href="#">My Trello</a>
+					</div>
+				</div>
+			</div>
+			<div class="body">
+				<div ng-view></div>
+				<!-- <form>
+				<label>Name</label> <input type="text" name="name"
+					ng-model="newboard.name" /> <label>Description</label> <input
+					type="text" name="description" ng-model="newboard.description" />  <br />
+				<input type="hidden" ng-model="newboard.id" /> <input
+					type="button" value="Save" ng-click="saveBoard()" />
+			</form>
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="board in boards">
+						<td>{{board.name}}</td>
+						<td>{{board.description}}</td>
+						<td><a href="#showBoard/{{board.id}}">show</a> |<a href="#" ng-click="editBoard(board.id)">edit</a> | <a
+							href="#" ng-click="removeBoard(board.id)">delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+ -->
+			</div>
+		</div>
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="lib/jquery/jquery-1.11.0.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<!-- AngularJS -->
+		<script src="lib/angularjs/angular.js"></script>
+		<script src="lib/angularjs/angular-route.js"></script>
+		<!-- my scripts -->
+		<script src="js/mainCtrl.js"></script>
+		<!-- my scripts -->
+		<!-- <script src="js/BoardView.js"></script> -->
+	</div>
+</body>
+</html>

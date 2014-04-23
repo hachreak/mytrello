@@ -1,0 +1,49 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="menu">
+			<a class="btn btn-default new" href="#Gui/Users/{{user.id}}/Boards/{{bid}}"
+				role="button"><span class="glyphicon glyphicon-backward"></span></a>
+
+		</div>
+		<h3 class="panel-title">Card</h3>
+	</div>
+	<div class="panel-body">
+		<div class="messages"></div>
+		<form name="cardform" role="form">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Name</label> <input
+					type="text" name="name" ng-model="newcard.name"
+					class="form-control" placeholder="Enter name">
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Status</label> 
+				<select class="form-control" ng-model="newcard.status">
+          <option ng-repeat="o in status" ng-selected="{{o.id==newcard.status}}"
+            value="{{o.id}}">{{o.name}}
+            </option>
+        </select>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">List</label> <select class="form-control" ng-model="newcard.list">
+					<option ng-repeat="o in lists" ng-selected="{{o.id==newcard.list}}"
+						value="{{o.id}}">{{o.name}}
+						</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label class="field-text">Description</label>
+			</div>
+			<div class="form-group">
+				<textarea class="form-control" rows="3" name="description"
+					ng-model="newcard.description"></textarea>
+			</div>
+			<div class="el-bottom">
+				<input type="hidden" ng-model="bid" name="board"> <input
+					type="hidden" value="card" name="object_type"> <input
+					type="hidden" ng-model="newcard.id" name="id"> <input
+					type="submit" value="save" class="btn btn-primary" ng-click="saveCard()"> <input
+					type="reset" value="reset" class="btn btn-danger">
+			</div>
+		</form>
+	</div>
+</div>

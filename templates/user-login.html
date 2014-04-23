@@ -1,0 +1,12 @@
+<div>
+  <div class="bg-danger">{{message}}</div>
+	<form role="form" class="form-signin">
+		<h2 class="form-signin-heading">Please sign in</h2>
+		<input type="text" autofocus="" required="" placeholder="Username"
+			class="form-control" ng-model="newuser.username"> <input
+			type="password" required="" placeholder="Password"
+			class="form-control" ng-model="newuser.password">
+		<button type="submit" class="btn btn-lg btn-primary btn-block"
+			ng-click="login()">Sign in</button>
+	</form>
+</div>

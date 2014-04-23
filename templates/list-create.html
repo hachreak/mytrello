@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="menu">
+			<a class="btn btn-default new"
+				href="#Gui/Users/{{user.id}}/Boards/{{newlist.board}}" role="button"><span
+				class="glyphicon glyphicon-backward"></span></a>
+
+		</div>
+		<h3 class="panel-title">List</h3>
+	</div>
+	<div class="panel-body">
+		<div class="messages"></div>
+		<form name="boardform" role="form">
+			<div class="form-group">
+				<label class="field-text">Name</label> <input
+					class="BoxUpper1 b-radius" type="text" name="name"
+					ng-model="newlist.name" class="form-control" placeholder="Enter name">
+			</div>
+			<div class="el-bottom">
+				<input type="hidden" value="list" name="object_type"> <input
+					type="hidden" ng-model="newlist.board" name="board"> <input
+					type="hidden" ng-model="newlist.id" name="id"> <input
+					type="submit" value="save" class="btn btn-primary" ng-click="saveList()"> <input
+					type="reset" value="reset" class="btn btn-danger">
+			</div>
+		</form>
+	</div>
+</div>

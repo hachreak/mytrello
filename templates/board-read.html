@@ -1,0 +1,58 @@
+<div class="panel panel-default Lists">
+	<div class="panel-heading">
+		<div class="menu">
+			<a class="btn btn-default new" href="#Gui/Users/{{user.id}}/Boards" role="button"><span
+				class="glyphicon glyphicon-step-backward"></span></a> <!-- <a
+				class="btn btn-default new" href="BoardView?id={{board.id}}"
+				role="button"><span class="glyphicon glyphicon-refresh"></span></a> -->
+			<a class="btn btn-primary new" href="#Gui/Users/{{user.id}}/Boards/{{board.id}}/lists/Create"
+				role="button"><span class="glyphicon glyphicon-plus"></span></a>
+		</div>
+		<h3 class="panel-title">{{board.name}}</h3>
+	</div>
+	<div class="panel-body row">
+		<div class="col-xs-4" ng-repeat="list in board.lists">
+			<div class="thumbnail list ">
+
+				<div class="caption">
+					<div class="header">
+						<div class="menu">
+							<a class="btn btn-primary btn-xs new"
+								href="#Gui/Users/{{user.id}}/Boards/{{board.id}}/lists/{{list.id}}/cards/Create"
+								role="button"><span class="glyphicon glyphicon-plus"></span></a>
+							<a class="btn btn-default btn-xs modify"
+								href="#Gui/Users/{{user.id}}/Boards/{{board.id}}/lists/{{list.id}}/Update" role="button"><span
+								class="glyphicon glyphicon-pencil"></span></a> <a
+								class="btn btn-danger btn-xs delete list" href="#Gui/Users/{{user.id}}/Boards/{{board.id}}/lists/{{list.id}}/Delete" role="button"
+								lid="" bid=""><span
+								class="glyphicon glyphicon-remove"></span></a>
+						</div>
+						<h4 class="title">{{list.name}}</h4>
+					</div>
+					<div class="cards">
+						<blockquote ng-repeat="card in list.cards">
+							<div class="header">
+								<div class="menu">
+									<span
+										class="glyphicon glyphicon-eye-{{card.status == 'open' ? 'open' : 'close' }}"></span>
+									<a class="btn btn-default btn-xs modify"
+										href="#Gui/Users/{{user.id}}/Boards/{{board.id}}/lists/{{list.id}}/cards/{{card.id}}/Update"
+										role="button"><span class="glyphicon glyphicon-pencil"></span></a>
+									<a class="btn btn-danger btn-xs delete card" href="#Gui/Users/{{user.id}}/Boards/{{board.id}}/lists/{{list.id}}/cards/{{card.id}}/Delete"
+										role="button""><span
+										class="glyphicon glyphicon-remove"></span></a>
+								</div>
+
+								<h4>
+									<!-- <a href="CardView?id={{card.id}}">{{card.name}}</a> -->
+									{{card.name}}
+								</h4>
+							</div>
+							<footer>{{card.description}}</footer>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+.panel .menu {
+	float: right;
+	position: relative;
+	top: -5px;
+}
+
+.panel .object-menu-last {
+	text-align: right;
+}
+
+.panel .name {
+	border-left: 0 none;
+	font-size: 92%;
+	padding: 0;
+}
+
+.menu-user{
+	float: right; line-height: 3.6em;
+}
+
+.panel .list-title{ display: inline; }
+.panel .cards blockquote{ background-color: #F9F9F8; }
+.panel .header .title{ color: #ccc; }
+.panel .header{ margin-bottom: 1em; }
+
+.panel input[type="text"].form-control, .panel select.form-control{ max-width: 30em; }

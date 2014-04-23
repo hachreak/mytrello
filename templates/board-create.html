@@ -1,0 +1,32 @@
+<div class="panel panel-default" ng-controller="BoardCreateCtrl">
+	<div class="panel-heading">
+		<div class="menu">
+			<a class="btn btn-default new"
+				href="#Gui/Users/{{user.id}}/Boards" role="button"><span
+				class="glyphicon glyphicon-backward"></span></a>
+
+		</div>
+		<h3 class="panel-title">Boards</h3>
+	</div>
+	<div class="panel-body">
+		<div class="messages"></div>
+		<form name="boardform" role="form">
+			<div class="form-group">
+				<label class="field-text">Name</label> <input type="text"
+					name="name" ng-model="newboard.name" class="form-control"
+					placeholder="Enter name">
+			</div>
+			<div class="form-group">
+				<label class="field-text">Description</label>
+			</div>
+			<div class="form-group">
+				<textarea class="form-control" rows="3" name="description" ng-model="newboard.description"></textarea>
+			</div>
+			<div class="el-bottom">
+				<input type="hidden" ng-model="newboard.id" name="id"> <input
+					type="submit" value="save" class="btn btn-primary" ng-click="saveBoard()"> <input
+					type="reset" value="reset" class="btn btn-danger">
+			</div>
+		</form>
+	</div>
+</div>
