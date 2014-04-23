@@ -21,6 +21,6 @@ This project contains a lightweight demo of a service trello.com developed basic
 It use only the client memory, so when reload the page, all the changes will be lost... ;)
 Enjoy it... :D
 
-p.s. To login:
+p.s. To see the demo, open the boards.html and the make the login:
   Username: pippo
   Password: 123
