@@ -20,3 +20,7 @@
 This project contains a lightweight demo of a service trello.com developed basically with AngularJS and Bootstrap.
 It use only the client memory, so when reload the page, all the changes will be lost... ;)
 Enjoy it... :D
+
+p.s. To login:
+  Username: pippo
+  Password: 123
